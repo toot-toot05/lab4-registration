@@ -10,3 +10,6 @@
 
 ## Run locally
 Open `index.html` in your browser.
+
+## link to repository
+https://github.com/toot-toot05/lab4-registration
