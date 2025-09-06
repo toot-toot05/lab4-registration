@@ -1,37 +1,49 @@
+<!-- HTML5 doctype declaration -->
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and responsive design -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Page title -->
   <title>Lab 4 — Registration → Profile Cards</title>
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Main container for the registration app -->
   <main class="container">
+    <!-- Page heading -->
     <h1>Student Registration</h1>
 
+    <!-- Registration form section -->
     <section aria-labelledby="form-heading">
       <h2 id="form-heading" class="sr">Registration form</h2>
 
+      <!-- Student registration form -->
       <form id="regForm" novalidate>
+        <!-- First name input row -->
         <div class="row">
           <label for="first">First name <span aria-hidden="true">*</span></label>
           <input id="first" name="first" type="text" required />
           <small class="error" id="err-first" aria-live="polite"></small>
         </div>
 
+        <!-- Last name input row -->
         <div class="row">
           <label for="last">Last name <span aria-hidden="true">*</span></label>
           <input id="last" name="last" type="text" required />
           <small class="error" id="err-last" aria-live="polite"></small>
         </div>
 
+        <!-- Email input row -->
         <div class="row">
           <label for="email">Email <span aria-hidden="true">*</span></label>
           <input id="email" name="email" type="email" required />
           <small class="error" id="err-email" aria-live="polite"></small>
         </div>
 
+        <!-- Programme select row -->
         <div class="row">
           <label for="prog">Programme</label>
           <select id="prog" name="prog" required>
@@ -44,6 +56,7 @@
           <small class="error" id="err-prog"></small>
         </div>
 
+        <!-- Year of study radio buttons -->
         <fieldset>
           <legend>Year of study <span aria-hidden="true">*</span></legend>
           <label><input type="radio" name="year" value="1" required /> 1</label>
@@ -53,6 +66,7 @@
           <small class="error" id="err-year"></small>
         </fieldset>
 
+        <!-- Interests checkboxes -->
         <fieldset>
           <legend>Interests</legend>
           <label><input type="checkbox" name="interests" value="Web" /> Web</label>
@@ -61,14 +75,17 @@
           <label><input type="checkbox" name="interests" value="Security" /> Security</label>
         </fieldset>
 
+        <!-- Photo URL input row -->
         <div class="row">
           <label for="photo">Photo URL</label>
           <input id="photo" name="photo" type="url" placeholder="https://example.com/photo.jpg" />
           <small class="error" id="err-photo"></small>
         </div>
 
+        <!-- Live region for form feedback (screen readers) -->
         <div id="live" aria-live="polite" class="sr" ></div>
 
+        <!-- Form action buttons -->
         <div class="actions">
           <button type="submit">Add Student</button>
           <button type="reset">Reset</button>
@@ -78,6 +95,7 @@
 
     <hr />
 
+    <!-- Section for displaying student profile cards -->
     <section aria-labelledby="cards-heading">
       <h2 id="cards-heading">Profiles</h2>
       <div id="cards" class="cards" aria-live="polite"></div>
@@ -85,6 +103,7 @@
 
     <hr />
 
+    <!-- Section for summary table of submitted profiles -->
     <section aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
       <table id="summary" class="summary" aria-describedby="summary-desc">
@@ -97,6 +116,7 @@
     </section>
   </main>
 
+  <!-- Link to JavaScript file for interactivity -->
   <script src="script.js" defer></script>
 </body>
 </html>
