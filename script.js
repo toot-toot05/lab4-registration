@@ -38,7 +38,7 @@
     ['first','last','email','prog','year','photo'].forEach(k => setError(k,''));
     live.textContent = '';
   }
-
+  // validation
   function validate(data) {
     clearErrors();
     let ok = true;
