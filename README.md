@@ -1,0 +1,11 @@
+# Lab 4 — Registration → Profile Cards
+
+## What it does
+- Accessible registration form (First, Last, Email, Programme, Year, Interests, Photo)
+- Inline validation and aria-live feedback
+- Creates a profile card and a summary table on submit
+- Remove action deletes both card and row
+- Optional persistence via localStorage
+
+## Run locally
+Open `index.html` in your browser.

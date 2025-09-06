@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab 4 — Registration → Profile Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Student Registration</h1>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading" class="sr">Registration form</h2>
+
+      <form id="regForm" novalidate>
+        <div class="row">
+          <label for="first">First name <span aria-hidden="true">*</span></label>
+          <input id="first" name="first" type="text" required />
+          <small class="error" id="err-first" aria-live="polite"></small>
+        </div>
+
+        <div class="row">
+          <label for="last">Last name <span aria-hidden="true">*</span></label>
+          <input id="last" name="last" type="text" required />
+          <small class="error" id="err-last" aria-live="polite"></small>
+        </div>
+
+        <div class="row">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" id="err-email" aria-live="polite"></small>
+        </div>
+
+        <div class="row">
+          <label for="prog">Programme</label>
+          <select id="prog" name="prog" required>
+            <option value="">-- Select programme --</option>
+            <option>Computer Science</option>
+            <option>Information Systems</option>
+            <option>Software Engineering</option>
+            <option>Other</option>
+          </select>
+          <small class="error" id="err-prog"></small>
+        </div>
+
+        <fieldset>
+          <legend>Year of study <span aria-hidden="true">*</span></legend>
+          <label><input type="radio" name="year" value="1" required /> 1</label>
+          <label><input type="radio" name="year" value="2" /> 2</label>
+          <label><input type="radio" name="year" value="3" /> 3</label>
+          <label><input type="radio" name="year" value="4" /> 4</label>
+          <small class="error" id="err-year"></small>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+          <label><input type="checkbox" name="interests" value="Web" /> Web</label>
+          <label><input type="checkbox" name="interests" value="AI" /> AI</label>
+          <label><input type="checkbox" name="interests" value="Mobile" /> Mobile</label>
+          <label><input type="checkbox" name="interests" value="Security" /> Security</label>
+        </fieldset>
+
+        <div class="row">
+          <label for="photo">Photo URL</label>
+          <input id="photo" name="photo" type="url" placeholder="https://example.com/photo.jpg" />
+          <small class="error" id="err-photo"></small>
+        </div>
+
+        <div id="live" aria-live="polite" class="sr" ></div>
+
+        <div class="actions">
+          <button type="submit">Add Student</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <hr />
+
+    <section aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Profiles</h2>
+      <div id="cards" class="cards" aria-live="polite"></div>
+    </section>
+
+    <hr />
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <table id="summary" class="summary" aria-describedby="summary-desc">
+        <caption id="summary-desc">Table of submitted profiles</caption>
+        <thead>
+          <tr><th>Name</th><th>Programme</th><th>Year</th><th>Interests</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
