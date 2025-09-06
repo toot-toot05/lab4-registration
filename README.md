@@ -6,6 +6,7 @@
 - Creates a profile card and a summary table on submit
 - Remove action deletes both card and row
 - Optional persistence via localStorage
+- all reactive in real time
 
 ## Run locally
 Open `index.html` in your browser.
